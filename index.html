@@ -1,0 +1,580 @@
+<style>/* ตั้งค่าแบบอิงฟอนต์และสีพื้นฐาน */
+body {
+  font-family: Arial, sans-serif;
+  color: #444;
+}
+body {
+zoom: 0.5; /* ลดขนาดเว็บลงเหลือ 80% */
+
+    }
+/* เว้นระยะรอบ section */
+section {
+  margin: 2px;
+}
+
+/* กล่องรวมการ์ดแบบเลื่อนแนวนอน */
+.cards-wrapper {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden; /* ป้องกันเลื่อนแนวตั้ง */
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+/* การ์ดแต่ละใบ */
+.card {
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+/* รูปภาพในการ์ด */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+/* เมื่อ hover การ์ด */
+.card:hover img {
+  border-color: #FF0000;
+}
+
+/* ข้อความใต้การ์ด */
+.card p {
+  color: #FF0000;
+  margin-top: 2px;
+}
+
+/* ตั้งค่าการแสดงผลแท็บ */
+.tabcontent {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+/* iframe ขนาดปกติ */
+.tabcontent iframe {
+  width: 95%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+
+<section>
+
+    <h2></h2>
+
+    <div class="cards-wrapper">
+
+      <div class="card active" onclick="openTab(event, 'tab1')">
+
+<img alt="Tab 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoqtSOLpsnNoQDHB6D2vBhjNP8VtukrhxhZjc6G3nRqZg8wh5ZhSRdSDQ2cM4oc3E5ZGoT3irkFsg4aL7bW1pHyg5kwPpj8W2wp7deV4cS136HnE8kYVejb-RtjoM_vVZycVH7UMzAKPbZEUM06KPPda61X3URckhZKaf1wgfQ7wiFgPE7SOtio_uM8g/s320/1000153796.png" />
+
+<p></p></div>
+
+       <div class="card" onclick="openTab(event, 'tab2')">
+
+        <img alt="Tab 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHlRj198TQlNAf4ojRxDbMcFO0aUAt28Pa-cvoZP78JIskZ9WKvn1D3b5PnYpqKXO6wbl74JjXxgTHaDNmOOaXJMHyzFLy0_zC59wiklTM91-Mfo085N-W5hpixVMauHujA3P1w6mQUfDgbTnKykY7w_Pw-to5tiHQ8Jhyphenhyphenx7Mcawn8NlLLInrYoac2RQ/s200/1000153797.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab32')">
+
+        <img alt="Tab 32" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHlRj198TQlNAf4ojRxDbMcFO0aUAt28Pa-cvoZP78JIskZ9WKvn1D3b5PnYpqKXO6wbl74JjXxgTHaDNmOOaXJMHyzFLy0_zC59wiklTM91-Mfo085N-W5hpixVMauHujA3P1w6mQUfDgbTnKykY7w_Pw-to5tiHQ8Jhyphenhyphenx7Mcawn8NlLLInrYoac2RQ/s200/1000153797.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab31')">
+
+        <img alt="Tab 31" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHlRj198TQlNAf4ojRxDbMcFO0aUAt28Pa-cvoZP78JIskZ9WKvn1D3b5PnYpqKXO6wbl74JjXxgTHaDNmOOaXJMHyzFLy0_zC59wiklTM91-Mfo085N-W5hpixVMauHujA3P1w6mQUfDgbTnKykY7w_Pw-to5tiHQ8Jhyphenhyphenx7Mcawn8NlLLInrYoac2RQ/s200/1000153797.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab4')">
+
+        <img alt="Tab 4" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoRAvQoBaSaZrsOhbH5lop1vC1djpRXsfcf3Rb_5jFXsmTSwDHfDB4JnvQH-FA4SHT8qLM6MNm3XfPt5rEuB4rwpq-TgtqAr1zZq1pJUfHhKoF303ZYMPzvF1Vxlvr9gtOeF2tD9xrCU8eHm6yWFcsOHeNYxvvJsMFuBKZjYYDBYZ-cnDevaOpRe0lrg/s320/1000153801.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab52')">
+
+        <img alt="Tab 52" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_wbzXBf7lOzRTT5JQtpz9sqYuCn09DMIjeECQ_kNA-y2f5kfxbDAd_s7a6CO4inDFAbIEgwEaS21t_Udj9N6hPLEI_qEc2SwOxoyDVsz-FIZ4-3gKMROBGkgbxSATH23qWuJbsLP9HOk_ZQvYDHsxsqBTvyfhBGgAyz0J5d-zfLdVLOD45Y9dt0cc-g/s320/1000153800.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab51')">
+
+        <img alt="Tab 51" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_wbzXBf7lOzRTT5JQtpz9sqYuCn09DMIjeECQ_kNA-y2f5kfxbDAd_s7a6CO4inDFAbIEgwEaS21t_Udj9N6hPLEI_qEc2SwOxoyDVsz-FIZ4-3gKMROBGkgbxSATH23qWuJbsLP9HOk_ZQvYDHsxsqBTvyfhBGgAyz0J5d-zfLdVLOD45Y9dt0cc-g/s320/1000153800.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab53')">
+
+        <img alt="Tab 53" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiooeLYrGMf-ECmkUSIVEj5yZ9YTeDkPDh5LiVOuegrJBGVcC1I4tdsWUVSGXnOeYq1A10_y_XwXcI-7FLVgGjxuEE877kCn7OtIBffZGdtwNWErvhb7YXa71Ef_nuWbmvYuLrS5SxN52QPtjHlYZKHNJwtK6f5W-A1FOburv0uRVOY0uHAthVDZK6POA/s320/1000189496.png" />
+
+        <p></p>
+
+      </div>
+
+
+ <div class="card" onclick="openTab(event, 'tab61')">
+
+        <img alt="Tab 61" src="https://i.ibb.co/PQBrR36/7-20231011-110414-0006.png" />
+
+        <p></p>
+
+      </div>
+
+ <div class="card" onclick="openTab(event, 'tab7')">
+
+        <img alt="Tab 7" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMyvbjDXsXsyGCeXvvfMppG5wUIQaL5M_sAGoqI1pjBFCGDLVDU-ror87jyt-142eXCGjNecNz8NqKWE0aYitX0_4pp-DsnSRlOI_fcOZqkg7wSZ-_n1FK5zoDYG7tUKwrFiajn7vmcMmJLPB_TuMBqZg0n9C0oe48M2M8MfvuUgsqKioLU1TYc1V9tw/s320/1000153798.png" />
+
+        <p></p>
+      </div>
+         </div>
+</section>
+
+
+<div class="tabcontent active" id="tab1">
+
+
+
+  <div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+  <div style="height: 2000px; margin-bottom: -550px; overflow: hidden; width: 100%;">
+
+
+<iframe
+  src="https://tiktokoa.com/?utm_medium=superpwa&utm_campaign=superpwa"
+  width="100%"
+  height="1500"
+  style="position: relative; top: -100px;"
+  loading="lazy"sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="yes"
+  allow="encrypted-media"
+  allowfullscreen>
+
+</iframe
+></div>
+</div>
+
+  <div class="tabcontent" id="tab11">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="no" src="https://viewtok.blogspot.com/?m=1" style="position: relative; top: -100px;" width="100%"></iframe></div>
+
+</div>
+
+<div class="tabcontent" id="tab2">
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+  <div style="height: 2000px; margin-bottom: -550px; overflow: hidden; width: 100%;">
+
+  <!-- เนื้อหาของคุณ -->
+
+<iframe  src="https://instastoriess.com/download-instagram-photo"
+
+  width="100%"
+  height="1500"
+  style="position: relative; top: -350px;"
+  loading="lazy"sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="yes"
+  allow="encrypted-media"
+  allowfullscreen>
+</iframe>
+</div>
+  </div></div>
+
+
+
+<div class="tabcontent" id="tab21">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1450px; margin-bottom: px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="yes" src="https://imginn.com/" style="position: relative; top: 0px;" width="100%"></iframe></div>
+</div>
+   
+    <div class="tabcontent" id="tab32">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom:-10 px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts " scrolling="yes" src="https://iganony.net/" style="position: relative; top: -60px;" width="100%"></iframe></div>
+</div> 
+
+<div class="tabcontent" id="tab3">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+<style>
+  #ad-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* ลดระดับลงพอให้ปิด iframe แต่ไม่ปิดเมนูเว็บ */
+  }
+
+  #ad-inner {
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 1000px;
+    max-height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  #tab6 {
+    position: relative; /* ต้องตั้งไว้เพื่อให้ ad-banner ซ้อนภายในแท็บนี้ได้ */
+  }
+</style>
+
+<!-- โฆษณาจะคลุมเฉพาะ tab6 -->
+<div id="ad-banner">
+  <div id="ad-inner">
+    <a href="https://bulkget.blogspot.com/?m=1" target="_blank" rel="noopener">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHUuMU4aFoUVXAXZjjI4b-zcg67T-5mrmon7464zXefFPGHulzLbpXOL676wD5zu4GHxK2pu1XiubHB1MspTbD51LN-6lpSSABTX1xK9pgZYXJrXTdnR4LY0yt7lVbP4n8IsL8GCMoDRx3JNf3yWzb_8YJp-hBjDdBThjGmGnGQ4G-dtOuJy-k4ea2A/s320/1000166947.png" alt="Ad" style="width: 100%; max-width: 1200px; height: auto; border-radius: 6px;" />
+    </a>
+  </div>
+</div>
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+<div style="height: 1480px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+  <iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="yes" src="https://iganony.net/" style="position: relative; top: -50px;" width="100%"></iframe>
+</div>
+</div>
+
+    <div class="tabcontent" id="tab31">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="no" src="https://gram-grabberz.vercel.app/" style="position: relative; top: -60px;" width="100%"></iframe></div>
+</div>
+
+    <div class="tabcontent" id="tab4">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 2200px; margin-bottom: -760px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="yes" src="https://kgirlscdn.blogspot.com/?m=1" style="position: relative; top: -60px;" width="100%"></iframe></div>
+</div>  
+
+<div class="tabcontent" id="tab5">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 2200px; margin-bottom: -1100px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="no" src="https://bulkgetkgirl2.blogspot.com/" style="position: relative; top: -70px;" width="100%"></iframe></div>
+</div>
+
+    
+     <div class="tabcontent" id="tab51">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-popups-to-escape-sandbox allow-modals allow-same-origin allow-scripts" scrolling="yes" src="https://x-downloader.com/" style="position: relative; top: -50px;" width="100%"></iframe></div><br />
+
+    </div>
+
+  <div class="tabcontent" id="tab52">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts" scrolling="no" src="https://xcomvideor.blogspot.com/?m=1" style="position: relative; top: -100px;" width="100%"></iframe></div>
+
+</div>
+
+
+     <div class="tabcontent" id="tab53">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-popups-to-escape-sandbox allow-modals allow-same-origin allow-scripts" scrolling="yes" src="https://sssthreads.pro/" style="position: relative; top: -100px;" width="100%"></iframe></div><br />
+
+    </div>
+
+  <div class="tabcontent" id="tab6">
+
+<style>
+  #ad-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* ลดระดับลงพอให้ปิด iframe แต่ไม่ปิดเมนูเว็บ */
+  }
+
+  #ad-inner {
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 1000px;
+    max-height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  #tab6 {
+    position: relative; /* ต้องตั้งไว้เพื่อให้ ad-banner ซ้อนภายในแท็บนี้ได้ */
+  }
+</style>
+
+<!-- โฆษณาจะคลุมเฉพาะ tab6 -->
+<div id="ad-banner">
+  <div id="ad-inner">
+    <a href="https://bulkget.blogspot.com/?m=1" target="_blank" rel="noopener">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHUuMU4aFoUVXAXZjjI4b-zcg67T-5mrmon7464zXefFPGHulzLbpXOL676wD5zu4GHxK2pu1XiubHB1MspTbD51LN-6lpSSABTX1xK9pgZYXJrXTdnR4LY0yt7lVbP4n8IsL8GCMoDRx3JNf3yWzb_8YJp-hBjDdBThjGmGnGQ4G-dtOuJy-k4ea2A/s320/1000166947.png" alt="Ad" style="width: 100%; max-width: 1200px; height: auto; border-radius: 6px;" />
+    </a>
+  </div>
+</div>
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+<div style="height: 1480px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+  <iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts allow-popups" scrolling="yes" src="https://solyptube.com/" style="position: relative; top: -40px;" width="100%"></iframe>
+</div>
+</div>
+
+     <div class="tabcontent" id="tab61">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-same-origin allow-scripts allow-popups" scrolling="no" src="https://bulkyt.blogspot.com/?m=1" style="position: relative; top: -80px;" width="100%"></iframe></div>
+
+</div>
+
+
+  <div class="tabcontent" id="tab7">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1500px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-popups-to-escape-sandbox allow-modals allow-same-origin allow-scripts" scrolling="yes" src="https://getvidfb.com" style="position: relative; top: -50px;" width="100%"></iframe></div><br />
+
+    </div>
+ 
+
+  <div class="tabcontent" id="tab8">
+
+      <!-- เพิ่มเนื้อหาแท็บอื่น ๆ ตามต้องการ -->
+
+<div style="margin-left: 0px; margin-top: 0px; overflow: hidden;"></div>
+
+<div style="height: 1550px; margin-bottom: 00px; overflow: hidden; width: 100%;">
+
+<iframe class="myIframe" allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="2000" sandbox="allow-forms allow-top-navigation allow-downloads allow-popups-to-escape-sandbox allow-modals allow-same-origin allow-scripts" scrolling="yes" src="https://9xbuddy.in/" style="position: relative; top: -100px;" width="100%"></iframe></div><br />
+
+    </div>
+
+       <section>
+   
+
+  <script>
+
+    function openTab(evt, tabName) {
+
+      var i, tabcontent, cards;
+
+      tabcontent = document.getElementsByClassName("tabcontent");
+
+      for (i = 0; i < tabcontent.length; i++) {
+
+        tabcontent[i].style.display = "none";
+
+      }
+
+      cards = document.getElementsByClassName("card");
+
+      for (i = 0; i < cards.length; i++) {
+
+        cards[i].classList.remove("active");
+
+      }
+
+      document.getElementById(tabName).style.display = "block";
+
+      evt.currentTarget.classList.add("active");
+
+    }
+
+  </script>
+    
+ 
+
+<script>
+
+    const iframes = document.querySelectorAll('.myIframe');
+
+    iframes.forEach(iframe => {
+
+        iframe.onload = function() {
+
+            try {
+
+                const iframeWindow = iframe.contentWindow;
+
+                // บล็อกการเปลี่ยนเส้นทาง
+
+                iframeWindow.onbeforeunload = function() {
+
+                    return "You are about to leave the page. Are you sure?";
+
+                };
+
+                // บล็อก popups
+
+                const originalOpen = iframeWindow.open;
+
+                iframeWindow.open = function() {
+
+                    console.log("Popup blocked");
+
+                    return null;
+
+                };
+
+                // ใช้ MutationObserver เพื่อเฝ้าดูการเปลี่ยนแปลงใน DOM
+
+                const observer = new MutationObserver(mutations => {
+
+                    mutations.forEach(mutation => {
+
+                        if (mutation.type === 'childList') {
+
+                            mutation.addedNodes.forEach(node => {
+
+                                if (node.nodeName === 'SCRIPT') {
+
+                                    node.parentNode.removeChild(node);
+
+                                    console.log("Script removed");
+
+                                }
+
+                            });
+
+                        }
+
+                    });
+
+                });
+
+                observer.observe(iframeWindow.document, {
+
+                    childList: true,
+
+                    subtree: true
+
+                });
+
+            } catch (e) {
+
+                console.error("Unable to access iframe content: ", e);
+
+            }
+
+        };
+
+    });
+
+  
+</script>   
+    
+<script>function openTab(evt, tabName) {
+  var i, tabcontent, card;
+
+  // 1. ซ่อนทุกแท็บ (ลบคลาส active ออกจากทุกเนื้อหา)
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+
+  // 2. ลบคลาส active จากทุกการ์ด
+  card = document.getElementsByClassName("card");
+  for (i = 0; i < card.length; i++) {
+    card[i].classList.remove("active");
+  }
+
+  // 3. แสดงเนื้อหาแท็บที่เลือก (โดยเพิ่มคลาส active)
+  document.getElementById(tabName).classList.add("active");
+
+  // 4. เพิ่มคลาส active ให้กับการ์ดที่คลิก
+  evt.currentTarget.classList.add("active");
+}</script></section></div></div>
